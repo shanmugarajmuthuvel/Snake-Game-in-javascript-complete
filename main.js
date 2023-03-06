@@ -91,3 +91,14 @@ const initgame=()=>{
 changefood()
 intervalid=setInterval(initgame,200)
 document.addEventListener("keyup",playgame)
+	// document.addEventListener("click",stop)
+		// function stop(){
+			  // velocityX = 0;
+			  // velocityY = 0;
+		// }
+button.addEventListener("click",Stop)
+       function Stop(){
+   		   velocityX = 0;
+          velocityY = 0;
+		  console.log("shanugaraj")
+	   }
