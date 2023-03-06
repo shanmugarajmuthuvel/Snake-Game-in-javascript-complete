@@ -74,4 +74,27 @@ body {
     padding: 15px 0;
     font-size: 1rem;
   }
+  .stop {
+    position: absolute;
+    top: 84%;
+    width: 24%;
+    left: 37%;
+    border: none;
+    font-size: 17px;
+    border-radius: 25px;
+    font-weight: bolder;
+    color: white;
+	padding:10px;
+    background-color: #a51212;
+}
+.stop:hover{
+	background-color:grey;
+	color:black;
+	
+}
+}
+@media(min-width:768px){
+.stop {
+	display:none;
+}
 }
