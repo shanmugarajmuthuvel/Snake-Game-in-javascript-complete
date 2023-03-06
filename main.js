@@ -2,6 +2,7 @@ var playBoard = document.querySelector(".play-board");
 var scoreelement=document.querySelector(".score")
 const highscoreelement=document.querySelector(".high-score")
 var controls=document.querySelectorAll(".controls i")
+var button=document.querySelector(".stop")
 let score=0;
 let gameOver=false
 let foodX, foodY;
