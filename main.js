@@ -1,6 +1,7 @@
 var playBoard = document.querySelector(".play-board");
 var scoreelement=document.querySelector(".score")
 const highscoreelement=document.querySelector(".high-score")
+var controls=document.querySelectorAll(".controls i")
 let score=0;
 let gameOver=false
 let foodX, foodY;
@@ -9,7 +10,7 @@ let velocityX = 0, velocityY = 0;
 let snakeBody=[]
 let intervalid;
 let highscore=localStorage.getItem("high-score")|| 0;
-highscoreelement.textContent=`High score${highscore}`
+highscoreelement.textContent=`High score:${highscore}`
 const changefood=()=>{
 	foodX=Math.floor(Math.random()*30)+1
 	foodY=Math.floor(Math.random()*30)+1
@@ -41,6 +42,13 @@ const playgame=e=>{
     }
 	
 }
+
+controls.forEach((key)=>{
+	   key.addEventListener("click",()=>{
+		      playgame({key:key.dataset.key})
+	   })
+})
+
 
 const initgame=()=>{
 	if(gameOver)return replay()
